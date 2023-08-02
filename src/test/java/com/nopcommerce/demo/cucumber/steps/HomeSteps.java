@@ -3,12 +3,9 @@ package com.nopcommerce.demo.cucumber.steps;
 
 import com.nopcommerce.demo.pages.HomePage;
 import com.nopcommerce.demo.pages.LoginPage;
-
 import cucumber.api.java.en.Given;
 import cucumber.api.java.en.Then;
 import cucumber.api.java.en.When;
-import org.openqa.selenium.By;
-import org.testng.Assert;
 
 public class HomeSteps {
 
@@ -16,10 +13,12 @@ public class HomeSteps {
     @Given("^I am on HomePage page$")
     public void i_am_on_HomePage_page(){
 
+
     }
 
     @When("^I click on login link$")
     public void i_click_on_login_link() {
+        new LoginPage().clickOnLoginButton();
 
     }
 

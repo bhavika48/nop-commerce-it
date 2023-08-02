@@ -17,3 +17,5 @@
 2023-08-01 20:08:934 INFO  DesktopsPage :59 - ascending order[[ChromeDriver: chrome on WINDOWS (9a275c98afa8d6167bf2ccb11d5533ba)] -> id: products-orderby]
 2023-08-01 20:08:321 INFO  HomePage :82 - MouseHover on ComputersMenu [[ChromeDriver: chrome on WINDOWS (374e84efb8c54661ac5ac6757f3d6d75)] -> link text: Computers]
 2023-08-01 20:08:447 INFO  HomePage :87 - Clicking on DesktopsSubMenu[[ChromeDriver: chrome on WINDOWS (374e84efb8c54661ac5ac6757f3d6d75)] -> link text: Desktops]
+2023-08-02 21:08:555 INFO  HomePage :69 - Clicking on ComputersMenu [[ChromeDriver: chrome on WINDOWS (bb47090da1fa4c6ce487528715fe82bb)] -> link text: Computers]
+2023-08-02 21:08:630 INFO  ComputerPage :18 - Get text of Computer page : [[ChromeDriver: chrome on WINDOWS (bb47090da1fa4c6ce487528715fe82bb)] -> xpath: //h1[contains(text(),'Computers')]]
