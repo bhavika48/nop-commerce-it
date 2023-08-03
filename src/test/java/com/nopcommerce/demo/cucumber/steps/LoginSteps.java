@@ -9,7 +9,7 @@ public class LoginSteps {
 
     @Then("^I should navigate to login page successfully$")
     public void i_should_navigate_to_login_page_successfully(){
-        String expectedMessage = "Welcome, Please Sign In";
+        String expectedMessage = "Welcome, Please Sign In!";
         String actualMessage = new LoginPage().getWelcomeText();
         Assert.assertEquals(actualMessage,expectedMessage, "Login page not displayed");
     }
