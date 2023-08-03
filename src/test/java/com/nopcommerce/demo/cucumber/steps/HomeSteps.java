@@ -19,8 +19,9 @@ public class HomeSteps {
     }
 
     @When("^I click on login link$")
-    public void i_click_on_login_link() {
-
+    public void i_click_on_login_link()
+    {
+        new HomePage().clickOnLoginLink();
     }
 
     @When("^I click on Register link$")
