@@ -19,3 +19,7 @@
 2023-08-01 20:08:447 INFO  HomePage :87 - Clicking on DesktopsSubMenu[[ChromeDriver: chrome on WINDOWS (374e84efb8c54661ac5ac6757f3d6d75)] -> link text: Desktops]
 2023-08-03 21:08:928 INFO  HomePage :55 - Clicking on login link : [[ChromeDriver: chrome on WINDOWS (6c34edbd600ba0b696c4daf1eb044121)] -> link text: Log in]
 2023-08-03 21:08:939 INFO  HomePage :55 - Clicking on login link : [[ChromeDriver: chrome on WINDOWS (844eb468ca3591f1ad4683230e865d4b)] -> link text: Log in]
+2023-08-06 11:08:202 INFO  ApparelPage :33 - MouseHover on ShoesMenu [[ChromeDriver: chrome on WINDOWS (7fbb368f0b441b272570d68b74c41dc6)] -> link text: Shoes]
+2023-08-06 11:08:148 INFO  HomePage :61 - Clicking on login link : [[ChromeDriver: chrome on WINDOWS (d9ea88910b236f57b1c8d1733a266af7)] -> link text: Log in]
+2023-08-06 11:08:14 INFO  ApparelPage :33 - MouseHover on ShoesMenu [[ChromeDriver: chrome on WINDOWS (70af4046c8a8cf4fe53c65a175dae7a8)] -> link text: Shoes]
+2023-08-06 11:08:221 INFO  HomePage :61 - Clicking on login link : [[ChromeDriver: chrome on WINDOWS (80b29366a91ed1753ecee35b9b44faff)] -> link text: Log in]
