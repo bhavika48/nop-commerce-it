@@ -46,6 +46,10 @@ public class HomePage extends Utility {
     @FindBy(linkText = "Cell phones")
     WebElement cellPhoneLink;
 
+    @CacheLookup
+    @FindBy(linkText = "Books")
+    WebElement bookLink;
+
     public void clickOnLoginLink() {
         clickOnElement(loginLink);
         log.info("Clicking on login link : " + loginLink.toString());
@@ -75,6 +79,12 @@ public class HomePage extends Utility {
         log.info("Clicking on ElectronicsMenu " + electronicsLink.toString());
         clickOnElement(electronicsLink);
     }
+
+    public void clickOnBooksMenu() {
+        log.info("Clicking on ElectronicsMenu " + bookLink.toString());
+        clickOnElement(bookLink);
+    }
+
 
     public void mouseHoverOnComputersMenu() {
         log.info("MouseHover on ComputersMenu " + computersLink.toString());
