@@ -34,7 +34,7 @@ public class ElectronicsPage  extends Utility {
 
     public String getElectronicPageTitle(){
         log.info("Verifying electronics Title : " + electronicsTitle.toString());
-      return   getTextFromElement(electronicsTitle);
+      return getTextFromElement(electronicsTitle);
     }
 
 }
