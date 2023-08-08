@@ -17,7 +17,6 @@ public class ApparelPage extends Utility
         PageFactory.initElements(driver, this);
     }
 
-
     @CacheLookup
     @FindBy(linkText = "Shoes")
     WebElement shoesLink;
@@ -26,6 +25,13 @@ public class ApparelPage extends Utility
     @FindBy(tagName = "h1")
     WebElement verifyShoesText;
 
+    @CacheLookup
+    @FindBy(xpath = "//a[@title='Show products in category Clothing'][normalize-space()='Clothing']")
+    WebElement clothingLink;
+
+    @CacheLookup
+    @FindBy(tagName = "h1")
+    WebElement verifyTextClothing;
 
 
     public void setShoesLink()
@@ -34,10 +40,24 @@ public class ApparelPage extends Utility
         mouseHoverToElementAndClick(shoesLink);
     }
 
+
     public void setVerifyShoesText()
     {
         String expectedMessage = "Shoes";
         String actualMessage = getTextFromElement(verifyShoesText);
+        Assert.assertEquals(actualMessage,expectedMessage);
+    }
+
+    public void setClothingLink()
+    {
+        log.info("MouseHover on Clothing " + clothingLink.toString());
+        mouseHoverToElementAndClick(clothingLink);
+    }
+
+    public void setVerifyTextClothingText()
+    {
+        String expectedMessage = "Clothing";
+        String actualMessage = getTextFromElement(verifyTextClothing);
         Assert.assertEquals(actualMessage,expectedMessage);
     }
 

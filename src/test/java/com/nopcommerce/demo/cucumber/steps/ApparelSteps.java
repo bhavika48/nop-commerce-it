@@ -9,22 +9,36 @@ import cucumber.api.java.en.When;
 
 public class ApparelSteps
 {
-    @When("^I should click on \"([^\"]*)\" Menu$")
+    @And("^I should click on \"([^\"]*)\" Menu$")
     public void iShouldClickOnMenu(String apparel)
     {
         new HomePage().clickOnMenuTab(apparel);
     }
 
 
-    @Then("^I should hoovering on shoes menu tab$")
+    @When("^I should hoovering on shoes menu tab$")
     public void iShouldHooveringOnShoesMenuTab()
     {
         new ApparelPage().setShoesLink();
     }
 
-    @And("^I should navigate to Apparel page successfully$")
-    public void iShouldNavigateToApparelPageSuccessfully()
+    @Then("^I should navigate to shoes page successfully$")
+    public void iShouldNavigateToShoesPageSuccessfully()
     {
         new ApparelPage().setVerifyShoesText();
+    }
+
+
+    @When("^I should hoovering on clothing menu tab$")
+    public void iShouldHooveringOnClothingMenuTab()
+    {
+        new ApparelPage().setClothingLink();
+    }
+
+
+    @Then("^I should navigate to clothing page successfully$")
+    public void iShouldNavigateToClothingPageSuccessfully()
+    {
+        new ApparelPage().setVerifyTextClothingText();
     }
 }
