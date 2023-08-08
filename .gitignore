@@ -2,3 +2,5 @@
 /target/
 *.out
 /src/main/java/com/nopcommerce/demo/screenshots/
+/src/main/java/com/nopcommerce/demo/logs/
+.idea/
