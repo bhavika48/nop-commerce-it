@@ -7,15 +7,15 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.CacheLookup;
 import org.openqa.selenium.support.FindBy;
 
-public class ComputerPage extends Utility {
-    private static final Logger log = LogManager.getLogger(ComputerPage.class.getName());
+public class DigitalDownloadPage extends Utility {
+    private static final Logger log = LogManager.getLogger(DigitalDownloadPage.class.getName());
 
     @CacheLookup
-    @FindBy(xpath = "//h1[contains(text(),'Computers')]")
-    WebElement computerText;
+    @FindBy(xpath = "//h1[contains(text(),'Digital downloads')]")
+    WebElement digitalDownloadText;
 
-    public String getComputerText() {
-        log.info("Get text of Computer page : " + computerText.toString());
-        return getTextFromElement(computerText);
+    public String getDigitalDownloadText() {
+        log.info("Get text of Digital Download page : " + digitalDownloadText.toString());
+        return getTextFromElement(digitalDownloadText);
     }
 }

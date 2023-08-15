@@ -1,23 +1,25 @@
 package com.nopcommerce.demo.cucumber.steps;
 
-import com.nopcommerce.demo.pages.ComputerPage;
+import com.nopcommerce.demo.pages.DigitalDownloadPage;
 import com.nopcommerce.demo.pages.HomePage;
 import cucumber.api.java.en.Then;
 import cucumber.api.java.en.When;
 import org.testng.Assert;
 
-public class ComputerSteps {
+public class DigitalDownloadSteps {
 
-        @When("^I click on Computer link$")
-        public void iClickOnComputerLink() {
-            new HomePage().clickOnComputersMenu();
+
+    @Then("^I should navigate to Digital Download successfully$")
+    public void iShouldNavigateToDigitalDownloadSuccessfully() {
+        String expectedMessage = "Digital downloads ";
+        String actualMessage = new DigitalDownloadPage().getDigitalDownloadText();
+        Assert.assertEquals(actualMessage,expectedMessage, "Digital Download page not displayed");
+    }
+
+    public static class MyStepdefs {
+        @When("^I click on Digital Download link$")
+        public void iClickOnDigitalDownloadLink() {
+            new HomePage().clickOnDigitalDownloadMenu();
         }
-
-        @Then("^I should navigate to Computer page successfully$")
-        public void iShouldNavigateToComputerPageSuccessfully() {
-            String expectedMessage = "Computers";
-            String actualMessage = new ComputerPage().getComputerText();
-            Assert.assertEquals(actualMessage,expectedMessage, "Computer page not displayed");
-        }
-
+    }
 }
