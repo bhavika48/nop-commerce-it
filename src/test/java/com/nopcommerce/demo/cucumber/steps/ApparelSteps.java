@@ -41,4 +41,16 @@ public class ApparelSteps
     {
         new ApparelPage().setVerifyTextClothingText();
     }
+
+    @When("^I should hoovering on accessories menu tab$")
+    public void iShouldHooveringOnAccessoriesMenuTab()
+    {
+        new ApparelPage().setAccessoriesLink();
+    }
+
+    @Then("^I should navigate to accessories page successfully$")
+    public void iShouldNavigateToAccessoriesPageSuccessfully()
+    {
+        new ApparelPage().setVerifyTextAccessories();
+    }
 }

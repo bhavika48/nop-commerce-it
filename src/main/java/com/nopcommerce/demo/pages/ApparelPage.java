@@ -33,6 +33,14 @@ public class ApparelPage extends Utility
     @FindBy(tagName = "h1")
     WebElement verifyTextClothing;
 
+    @CacheLookup
+    @FindBy(xpath = "//a[@title='Show products in category Accessories'][normalize-space()='Accessories']")
+    WebElement accessoriesLink;
+
+    @CacheLookup
+    @FindBy(tagName = "h1")
+    WebElement verifyTextAccessories;
+
 
     public void setShoesLink()
     {
@@ -60,5 +68,20 @@ public class ApparelPage extends Utility
         String actualMessage = getTextFromElement(verifyTextClothing);
         Assert.assertEquals(actualMessage,expectedMessage);
     }
+
+    public void setAccessoriesLink()
+    {
+        log.info("MouseHover On Accessories " + accessoriesLink.toString());
+        mouseHoverToElementAndClick(accessoriesLink);
+    }
+
+    public void setVerifyTextAccessories()
+    {
+        String expectedMessage = "Accessories";
+        String actualMessage = getTextFromElement(verifyTextAccessories);
+        Assert.assertEquals(actualMessage,expectedMessage);
+        log.info("Verify text Accessories " + verifyTextAccessories.toString());
+    }
+
 
 }
