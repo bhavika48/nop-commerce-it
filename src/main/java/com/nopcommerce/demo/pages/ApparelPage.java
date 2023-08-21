@@ -22,7 +22,7 @@ public class ApparelPage extends Utility
     WebElement shoesLink;
 
     @CacheLookup
-    @FindBy(tagName = "h1")
+    @FindBy(xpath = "//h1[contains(text(),'Shoes')]")
     WebElement verifyShoesText;
 
     @CacheLookup
@@ -30,7 +30,7 @@ public class ApparelPage extends Utility
     WebElement clothingLink;
 
     @CacheLookup
-    @FindBy(tagName = "h1")
+    @FindBy(xpath = "//h1[contains(text(),'Clothing')]")
     WebElement verifyTextClothing;
 
     @CacheLookup
@@ -38,7 +38,7 @@ public class ApparelPage extends Utility
     WebElement accessoriesLink;
 
     @CacheLookup
-    @FindBy(tagName = "h1")
+    @FindBy(xpath = "//h1[contains(text(),'Accessories')]")
     WebElement verifyTextAccessories;
 
 
