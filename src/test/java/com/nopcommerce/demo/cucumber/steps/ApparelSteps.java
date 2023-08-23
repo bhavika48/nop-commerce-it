@@ -2,7 +2,6 @@ package com.nopcommerce.demo.cucumber.steps;
 
 import com.nopcommerce.demo.pages.ApparelPage;
 import com.nopcommerce.demo.pages.HomePage;
-import cucumber.api.PendingException;
 import cucumber.api.java.en.And;
 import cucumber.api.java.en.Then;
 import cucumber.api.java.en.When;
@@ -40,5 +39,17 @@ public class ApparelSteps
     public void iShouldNavigateToClothingPageSuccessfully()
     {
         new ApparelPage().setVerifyTextClothingText();
+    }
+
+    @When("^I should hoovering on accessories menu tab$")
+    public void iShouldHooveringOnAccessoriesMenuTab()
+    {
+        new ApparelPage().setAccessoriesLink();
+    }
+
+    @Then("^I should navigate to accessories page successfully$")
+    public void iShouldNavigateToAccessoriesPageSuccessfully()
+    {
+        new ApparelPage().setVerifyTextAccessories();
     }
 }
