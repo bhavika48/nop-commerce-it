@@ -18,6 +18,10 @@ public class ApparelPage extends Utility
     }
 
     @CacheLookup
+    @FindBy(linkText = "Appar")
+    WebElement apparelLink;
+
+    @CacheLookup
     @FindBy(linkText = "Shoes")
     WebElement shoesLink;
 
@@ -41,6 +45,13 @@ public class ApparelPage extends Utility
     @FindBy(xpath = "//h1[contains(text(),'Accessories')]")
     WebElement verifyTextAccessories;
 
+=======
+    public void setApparelLink()
+    {
+        log.info("Clicking on ApparelMenu " + apparelLink.toString());
+        clickOnElement(apparelLink);
+    }
+>>>>>>> Stashed changes
 
     public void setShoesLink()
     {
@@ -54,6 +65,7 @@ public class ApparelPage extends Utility
         String expectedMessage = "Shoes";
         String actualMessage = getTextFromElement(verifyShoesText);
         Assert.assertEquals(actualMessage,expectedMessage);
+        log.info("Verify Text  Shoes " + verifyShoesText.toString());
     }
 
     public void setClothingLink()
@@ -67,6 +79,7 @@ public class ApparelPage extends Utility
         String expectedMessage = "Clothing";
         String actualMessage = getTextFromElement(verifyTextClothing);
         Assert.assertEquals(actualMessage,expectedMessage);
+        log.info("Verify Text  Clothing " + verifyTextClothing.toString());
     }
 
     public void setAccessoriesLink()
@@ -80,8 +93,6 @@ public class ApparelPage extends Utility
         String expectedMessage = "Accessories";
         String actualMessage = getTextFromElement(verifyTextAccessories);
         Assert.assertEquals(actualMessage,expectedMessage);
-        log.info("Verify text Accessories " + verifyTextAccessories.toString());
+        log.info("Verify Text Accessories " + verifyTextAccessories.toString());
     }
-
-
 }

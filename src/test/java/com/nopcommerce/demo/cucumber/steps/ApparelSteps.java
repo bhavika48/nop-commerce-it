@@ -2,7 +2,6 @@ package com.nopcommerce.demo.cucumber.steps;
 
 import com.nopcommerce.demo.pages.ApparelPage;
 import com.nopcommerce.demo.pages.HomePage;
-import cucumber.api.PendingException;
 import cucumber.api.java.en.And;
 import cucumber.api.java.en.Then;
 import cucumber.api.java.en.When;
