@@ -19,3 +19,5 @@
 2023-08-01 20:08:447 INFO  HomePage :87 - Clicking on DesktopsSubMenu[[ChromeDriver: chrome on WINDOWS (374e84efb8c54661ac5ac6757f3d6d75)] -> link text: Desktops]
 2023-08-03 21:08:928 INFO  HomePage :55 - Clicking on login link : [[ChromeDriver: chrome on WINDOWS (6c34edbd600ba0b696c4daf1eb044121)] -> link text: Log in]
 2023-08-03 21:08:939 INFO  HomePage :55 - Clicking on login link : [[ChromeDriver: chrome on WINDOWS (844eb468ca3591f1ad4683230e865d4b)] -> link text: Log in]
+2023-08-10 15:08:582 INFO  GiftCardsPage :30 - Clicking on login link : [[ChromeDriver: chrome on WINDOWS (aeab9af3890fa9d547730f5297aca3c2)] -> link text: Gift Cards]
+2023-08-10 15:08:594 INFO  GiftCardsPage :34 - Clicking on login link : [[ChromeDriver: chrome on WINDOWS (aeab9af3890fa9d547730f5297aca3c2)] -> link text: Gift Cards]
