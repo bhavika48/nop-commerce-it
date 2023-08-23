@@ -37,6 +37,7 @@ public class ApparelPage extends Utility
     @FindBy(xpath = "//h1[contains(text(),'Clothing')]")
     WebElement verifyTextClothing;
 
+<<<<<<< Updated upstream
     @CacheLookup
     @FindBy(xpath = "//a[@title='Show products in category Accessories'][normalize-space()='Accessories']")
     WebElement accessoriesLink;
