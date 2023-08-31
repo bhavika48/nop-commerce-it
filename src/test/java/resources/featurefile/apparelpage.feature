@@ -15,3 +15,8 @@ Feature: ApparelMenu Test
     Scenario: User should navigate to clothing page successfully
       When    I should hoovering on clothing menu tab
       Then    I should navigate to clothing page successfully
+
+  @smoke
+  Scenario: User should navigate to accessories page successfully
+    When    I should hoovering on accessories menu tab
+    Then    I should navigate to accessories page successfully

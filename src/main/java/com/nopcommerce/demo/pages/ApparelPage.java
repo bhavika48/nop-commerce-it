@@ -18,11 +18,15 @@ public class ApparelPage extends Utility
     }
 
     @CacheLookup
+    @FindBy(linkText = "Appar")
+    WebElement apparelLink;
+
+    @CacheLookup
     @FindBy(linkText = "Shoes")
     WebElement shoesLink;
 
     @CacheLookup
-    @FindBy(tagName = "h1")
+    @FindBy(xpath = "//h1[contains(text(),'Shoes')]")
     WebElement verifyShoesText;
 
     @CacheLookup
@@ -30,9 +34,25 @@ public class ApparelPage extends Utility
     WebElement clothingLink;
 
     @CacheLookup
-    @FindBy(tagName = "h1")
+    @FindBy(xpath = "//h1[contains(text(),'Clothing')]")
     WebElement verifyTextClothing;
 
+<<<<<<< Updated upstream
+    @CacheLookup
+    @FindBy(xpath = "//a[@title='Show products in category Accessories'][normalize-space()='Accessories']")
+    WebElement accessoriesLink;
+
+    @CacheLookup
+    @FindBy(xpath = "//h1[contains(text(),'Accessories')]")
+    WebElement verifyTextAccessories;
+
+=======
+    public void setApparelLink()
+    {
+        log.info("Clicking on ApparelMenu " + apparelLink.toString());
+        clickOnElement(apparelLink);
+    }
+>>>>>>> Stashed changes
 
     public void setShoesLink()
     {
@@ -46,6 +66,7 @@ public class ApparelPage extends Utility
         String expectedMessage = "Shoes";
         String actualMessage = getTextFromElement(verifyShoesText);
         Assert.assertEquals(actualMessage,expectedMessage);
+        log.info("Verify Text  Shoes " + verifyShoesText.toString());
     }
 
     public void setClothingLink()
@@ -59,6 +80,20 @@ public class ApparelPage extends Utility
         String expectedMessage = "Clothing";
         String actualMessage = getTextFromElement(verifyTextClothing);
         Assert.assertEquals(actualMessage,expectedMessage);
+        log.info("Verify Text  Clothing " + verifyTextClothing.toString());
     }
 
+    public void setAccessoriesLink()
+    {
+        log.info("MouseHover On Accessories " + accessoriesLink.toString());
+        mouseHoverToElementAndClick(accessoriesLink);
+    }
+
+    public void setVerifyTextAccessories()
+    {
+        String expectedMessage = "Accessories";
+        String actualMessage = getTextFromElement(verifyTextAccessories);
+        Assert.assertEquals(actualMessage,expectedMessage);
+        log.info("Verify Text Accessories " + verifyTextAccessories.toString());
+    }
 }
