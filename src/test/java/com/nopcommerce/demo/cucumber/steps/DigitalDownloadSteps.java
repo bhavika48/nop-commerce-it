@@ -13,7 +13,7 @@ public class DigitalDownloadSteps {
     public void iShouldNavigateToDigitalDownloadSuccessfully() {
         String expectedMessage = "Digital downloads ";
         String actualMessage = new DigitalDownloadPage().getDigitalDownloadText();
-        Assert.assertEquals(actualMessage, expectedMessage, "Digital Download page not displayed");
+        Assert.assertEquals(actualMessage,expectedMessage, "Digital Download page not displayed");
     }
 
     @When("^I click on Digital Download link$")

@@ -28,7 +28,7 @@ public class LoginPage extends Utility {
     WebElement passwordField;
 
     @CacheLookup
-    @FindBy(xpath = "//button[contains(text(),'Log in')]")
+    @FindBy(xpath = "//a[contains(text(),'Log in')]")
     WebElement loginButton;
 
     @CacheLookup
