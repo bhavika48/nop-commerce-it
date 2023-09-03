@@ -14,8 +14,14 @@ public class ComputerPage extends Utility {
     @FindBy(xpath = "//h1[contains(text(),'Computers')]")
     WebElement computerText;
 
+
     public String getComputerText() {
         log.info("Get text of Computer page : " + computerText.toString());
         return getTextFromElement(computerText);
     }
+
+
+
+
+
 }
