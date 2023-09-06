@@ -1,11 +1,15 @@
 # The name of the workflow. GitHub displays the names of your workflows under your repository's "Actions" tab. If you omit `name`, GitHub displays the workflow file path relative to the root of the repository.
-name: Java CI
+name: Maven CI/CD
 
 #
-on: [push]
+on:
+ push:
+    branches: [ master ]
+   pull_request:
+    branches: [ master ]
 #
 jobs:
-  build:
+  build_and_test:
 
     # <!-- This is a YAML comment for use in annotated code examples. -->
     # You can run this workflow using a different operating systems.
@@ -18,14 +22,18 @@ jobs:
     runs-on: ubuntu-latest
 #
     steps:
-      # This step uses the `actions/checkout` action to download a copy of your repository on the runner.
-      - uses: actions/checkout@v3
-      # This step uses the `actions/setup-java` action to configure the Eclipse Temurin (Java) 17 JDK by Eclipse Adoptium.
-      - name: Set up JDK 17
-        uses: actions/setup-java@v3
-        with:
-          java-version: '17'
-          distribution: 'temurin'
-      # The "Build with Maven" step runs the Maven `package` target in non-interactive mode to ensure that your code builds, tests pass, and a package can be created.
-      - name: Build with Maven
-        run: mvn --batch-mode --update-snapshots package
+        - uses: actions/checkout@v2
+        - name: Set up JDK 14
+          uses: actions/setup-java@v1
+          with:
+            java-version: 14
+
+        - name: Cache the Maven packages to speed up build
+          uses: actions/cache@v1
+          with:
+            path: ~/.m2
+            key: ${{ runner.os }}-m2-${{ hashFiles('**/pom.xml') }}
+            restore-keys: ${{ runner.os }}-m2
+
+        - name: Build project with Maven
+          run: mvn -B package --file pom.xml
