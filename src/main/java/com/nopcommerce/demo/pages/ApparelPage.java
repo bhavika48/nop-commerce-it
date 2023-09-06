@@ -37,7 +37,7 @@ public class ApparelPage extends Utility
     @FindBy(xpath = "//h1[contains(text(),'Clothing')]")
     WebElement verifyTextClothing;
 
-<<<<<<< Updated upstream
+
     @CacheLookup
     @FindBy(xpath = "//a[@title='Show products in category Accessories'][normalize-space()='Accessories']")
     WebElement accessoriesLink;
@@ -46,13 +46,12 @@ public class ApparelPage extends Utility
     @FindBy(xpath = "//h1[contains(text(),'Accessories')]")
     WebElement verifyTextAccessories;
 
-=======
+
     public void setApparelLink()
     {
         log.info("Clicking on ApparelMenu " + apparelLink.toString());
         clickOnElement(apparelLink);
     }
->>>>>>> Stashed changes
 
     public void setShoesLink()
     {

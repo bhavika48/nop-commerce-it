@@ -27,11 +27,11 @@ public class GiftCardsPage extends Utility {
 
     public void clickOnGiftCardsLink() {
         clickOnElement(giftCardsLink);
-        log.info("Clicking on login link : " + giftCardsLink.toString());
+        log.info("Clicking on GiftCards link : " + giftCardsLink.toString());
     }
 
     public String getGiftCardsPageTitle() {
-        log.info("Clicking on login link : " + giftCardsLink.toString());
+        log.info("Get Title of GiftCards : " + giftCardsPageTitle.toString());
         return getTextFromElement(giftCardsPageTitle);
     }
 
