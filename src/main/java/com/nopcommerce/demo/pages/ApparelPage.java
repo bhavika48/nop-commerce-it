@@ -53,6 +53,7 @@ public class ApparelPage extends Utility
         clickOnElement(apparelLink);
     }
 
+
     public void setShoesLink()
     {
         log.info("MouseHover on ShoesMenu " + shoesLink.toString());
