@@ -16,10 +16,8 @@ public class DigitalDownloadSteps {
         Assert.assertEquals(actualMessage,expectedMessage, "Digital Download page not displayed");
     }
 
-    public static class MyStepdefs {
-        @When("^I click on Digital Download link$")
-        public void iClickOnDigitalDownloadLink() {
-            new HomePage().clickOnDigitalDownloadMenu();
-        }
+    @When("^I click on Digital Download link$")
+    public void iClickOnDigitalDownloadLink() {
+        new HomePage().clickOnDigitalDownloadMenu();
     }
 }
