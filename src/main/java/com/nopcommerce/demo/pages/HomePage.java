@@ -50,7 +50,6 @@ public class HomePage extends Utility {
     @FindBy(linkText = "Books")
     WebElement bookLink;
 
-<<<<<<< Updated upstream
     @CacheLookup
     @FindBy(linkText = "Digital downloads ")
     WebElement digitalDownload;
@@ -59,10 +58,6 @@ public class HomePage extends Utility {
     @FindBy(linkText = "Appar")
     WebElement apparelLink;
 
-
-
-=======
->>>>>>> Stashed changes
     public void clickOnLoginLink() {
         clickOnElement(loginLink);
         log.info("Clicking on login link : " + loginLink.toString());

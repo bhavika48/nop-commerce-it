@@ -1,6 +1,7 @@
 package com.nopcommerce.demo.cucumber.steps;
 
 
+import com.nopcommerce.demo.pages.HomePage;
 import cucumber.api.java.en.Given;
 import cucumber.api.java.en.Then;
 import cucumber.api.java.en.When;
@@ -14,8 +15,7 @@ public class HomeSteps {
     }
 
     @When("^I click on login link$")
-    public void i_click_on_login_link()
-    {
+    public void i_click_on_login_link() {
         new HomePage().clickOnLoginLink();
     }
 
